@@ -1,0 +1,32 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #343a40;
+    color: white;
+}
+
+#portfolio .row > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#portfolio img {
+    transition: transform .2s; /* Animation */
+}
+
+#portfolio img:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+footer {
+    background-color: #343a40;
+    color: white;
+}
