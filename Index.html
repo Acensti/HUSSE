@@ -1,78 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hussebygg AB</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
 </head>
-
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Hussebygg AB</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact Me</a>
-                </li>
+    <header>
+        <img src="images/logo.png" alt="Hussebygg AB logo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
-        </div>
-    </nav>
-
-    <!-- Header section -->
-    <header class="text-center py-5">
-        <h1>Hussebygg AB</h1>
-        <p>Renovating bathrooms with precision and excellence.</p>
+        </nav>
     </header>
-
-    <!-- Portfolio section -->
-    <section id="portfolio" class="py-5">
-        <h2 class="text-center">Our Work</h2>
-        <div class="container">
-            <div class="row">
-                <!-- Add images here -->
-                <div class="col-md-4 mb-4">
-                    <img src="images/image1.png" class="img-fluid" alt="Work example 1">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="images/image2.png" class="img-fluid" alt="Work example 2">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="images/image3.jpg" class="img-fluid" alt="Work example 3">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="images/image4.jpg" class="img-fluid" alt="Work example 4">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="images/image5.png" class="img-fluid" alt="Work example 5">
-                </div>
-            </div>
+    <section id="about">
+        <h1>About Us</h1>
+        <p>Hussebygg is a dedicated team of bathroom renovation specialists. With our focus on personalized and high-quality transformations, we bring expertise and creativity to every project. From modernizing your space to creating a spa-like retreat, we make your vision a reality. With open communication and a commitment to customer satisfaction, we deliver exceptional craftsmanship and outstanding service. Trust Hussebygg for your bathroom renovation needs and let us transform your space into a functional and stylish oasis.</p>
+    </section>
+    <section id="portfolio">
+        <h1>Our Work</h1>
+        <div id="portfolio-grid">
+            <img src="images/image1.png" class="portfolio-image" alt="Image 1" />
+            <img src="images/image2.png" class="portfolio-image" alt="Image 2" />
+            <img src="images/image3.png" class="portfolio-image" alt="Image 3" />
+            <img src="images/image5.png" class="portfolio-image" alt="Image 5" />
         </div>
     </section>
-
-    <!-- Contact section -->
-    <footer id="contact" class="py-5 text-center">
-        <h2>Contact Us</h2>
-        <p>Email: ass@gmail.com</p>
-        <p>Phone: 0231122</p>
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <p>Email: hussebygg@example.com</p>
+        <p>Phone: 012-3456789</p>
+    </section>
+    <footer>
+        <p>&copy; 2023 Hussebygg AB. All rights reserved.</p>
     </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
-</
+</html>

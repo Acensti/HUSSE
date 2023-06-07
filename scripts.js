@@ -1,20 +1,14 @@
-/* scripts.js */
+window.addEventListener('DOMContentLoaded', (event) => {
+    const portfolioImages = Array.from(document.querySelectorAll(".portfolio-image"));
 
-// Select all images
-const images = document.querySelectorAll('#portfolio img');
+    function changeBackgroundImage() {
+        const currentBackgroundIndex = Math.floor(Math.random() * portfolioImages.length);
+        const image = portfolioImages[currentBackgroundIndex];
+        document.body.style.backgroundImage = `url('${getComputedStyle(image).backgroundImage.slice(4, -1)}')`;
+    }
 
-// Function to add transition effect
-function addTransition() {
-    this.style.transform = 'scale(1.1)'; // Enlarge the image
-}
+    setInterval(changeBackgroundImage, 5000); // Change every 5 seconds
 
-// Function to remove transition effect
-function removeTransition() {
-    this.style.transform = 'scale(1)'; // Return the image to original size
-}
-
-// Add event listeners to each image
-images.forEach(img => {
-    img.addEventListener('mouseover', addTransition);
-    img.addEventListener('mouseout', removeTransition);
+    // Initial background image
+    changeBackgroundImage();
 });
