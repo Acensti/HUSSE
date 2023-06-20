@@ -1,60 +1,24 @@
 body, h1, p {
     font-family: 'Montserrat', sans-serif;
+    color: #333; /* Darker text for better contrast against light backgrounds */
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: background-image 2s ease-in-out;
+    background-color: #f1f1f1; /* Light grey background color */
 }
+
+/* Updated Header Styles */
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #004a8f; /* Dark blue background for contrast */
+    color: #fff; /* White text for contrast */
 }
-
-nav ul li a {
-    transition: color 0.5s ease;
-}
-
-nav ul li a:hover {
-    color: #fff;
-}
-
-#about, #contact {
-    animation: slide-in 2s ease-out;
-}
-
-.portfolio-image {
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.portfolio-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-@keyframes slide-in {
-    0% { transform: translateY(-50px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes fade-in {
-     0% { opacity: 0; }
-     100% { opacity: 1; }
-}
-
-footer {
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Existing styles below */
 
 #logo {
     width: 100px;
@@ -64,16 +28,18 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+}
+
+nav ul li {
+    margin-left: 20px; /* Space out the navigation links */
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #004a8f;
+    color: #fff; /* White text for contrast */
 }
 
 nav ul li a:hover {
-    color: #ddd;
     text-decoration: underline;
     transition: color 0.3s ease;
 }
@@ -82,6 +48,8 @@ section {
     padding: 20px;
     text-align: center;
 }
+
+/* Portfolio Styles */
 
 #portfolio-grid {
     display: grid;
@@ -92,29 +60,53 @@ section {
 .portfolio-image {
     width: 100%;
     height: auto;
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 1s ease;
-    animation: fade-in 1s 1 forwards;
+    transition: transform 0.3s ease;
 }
 
-@keyframes slide-in {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+.portfolio-image:hover {
+    transform: scale(1.05); /* Zoom in slightly on hover */
 }
 
-#about, #contact {
-    animation: 2s ease-out 0s 1 slide-in;
+/* Contact Styles */
+
+#contact {
+    background-color: #fff; /* White background for contrast */
+    color: #333; /* Darker text for contrast */
+    padding: 20px;
 }
 
 footer {
-    background-color: #004a8f;
-    color: #fff;
+    background-color: #004a8f; /* Dark blue background for contrast */
+    color: #fff; /* White text for contrast */
     padding: 20px;
     text-align: center;
+}
+
+/* Animations */
+
+@keyframes slide-in {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Apply the animations to the sections */
+#about, #contact {
+    animation: slide-in 2s ease-out;
+}
+
+.portfolio-image {
+    opacity: 0;
+    animation: fade-in 1s 1 forwards;
+}
+
+/* Enhanced hover effect for portfolio images */
+.portfolio-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
